@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+
+        html{
+            font-size: 14px;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .container{
+            width:90%;
+            margin:0 auto;
+            display:flex;
+            flex-direction: column;
+        }
+        
+        h3{
+            font-size:1.2rem;
+            margin:1rem 0;
+        }
+
+        .header_container{
+            background: beige;
+            width:100%;
+            margin:0 auto;
+            display:flex;
+            /* flex-direction:row;
+            flex-wrap:nowrap; */
+            flex-flow:nowrap row;
+            justify-content:space-around;
+            
+            
+            height:60px;
+        }
+
+        .item{
+           
+            height:30px;
+            background:chocolate;
+        }
+        
+        /* 전체 열*/
+        .item1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow:1;
+            
+        }
+
+        .item2{
+            display:flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            background: yellowgreen;
+            flex-grow:3;
+        }
+
+        .item3{
+            display:flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            background: gold;
+            flex-grow:4;
+        }
+
+        .item4{
+            display:flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            background: green;
+            flex-grow:2;
+
+
+        }
+
+       
+        .item2 .title, .item3 .title, .item4 .title{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height:30px;
+            
+        }
+
+         /* 두번째 열 */
+        .item2_sub{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            height:30px;
+            align-content: stretch;
+        }
+
+        .item2_sub .subitem{
+                        
+            align-self:stretch;
+            /*박스안에 글자 정렬*/
+            
+            text-align: center;
+            line-height: 30px;
+
+        }
+        .item2_sub .sub_1{            
+            background:#ef9a9a;
+            flex-grow: 1;
+            flex-shrink: 1;    
+    
+        }
+        .item2_sub .sub_2{            
+            background:#efdd9a;
+            flex-grow: 1;
+            flex-shrink: 1;     
+                     
+        }
+        .item2_sub .sub_3{            
+            background:#afdd9a;
+            flex-grow: 1;
+            flex-shrink: 1;     
+                    
+        }
+        .item2_sub .sub_4{            
+            background:#cfed9a;
+            flex-grow: 2;
+            flex-shrink: 1;  
+               
+                     
+        }
+        /*3번째 열*/
+        .item3_sub{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            height:30px;
+            align-content: stretch;
+        }
+
+        .item3_sub .subitem{
+                        
+            align-self:stretch;
+            /*박스안에 글자 정렬*/
+            
+            text-align: center;
+            line-height: 30px;
+
+        }
+        .item3_sub .sub_1{            
+            background:#ef9a9a;
+            flex-grow: 1;
+            flex-shrink: 1;    
+    
+        }
+        .item3_sub .sub_2{            
+            background:#efdd9a;
+            flex-grow: 1;
+            flex-shrink: 1;     
+                     
+        }
+        .item3_sub .sub_3{            
+            background:#afdd9a;
+            flex-grow: 1;
+            flex-shrink: 1;     
+                    
+        }
+        .item3_sub .sub_4{            
+            background:#cfed9a;
+            flex-grow: 1;
+            flex-shrink: 1;  
+               
+                     
+        }
+        .item3_sub .sub_5{            
+            background:#065c8d;
+            flex-grow: 2;
+            flex-shrink: 1;  
+               
+                     
+        }
+        /*4번째 열*/
+        .item4_sub{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            height:30px;
+            align-content: stretch;
+        }
+
+        .item4_sub .subitem{
+                        
+            align-self:stretch;
+            /*박스안에 글자 정렬*/
+            
+            text-align: center;
+            line-height: 30px;
+
+        }
+        .item4_sub .sub_1{            
+            background:#ef9a9a;
+            flex-grow: 1;
+            flex-shrink: 1;    
+    
+        }
+        .item4_sub .sub_2{            
+            background:#efdd9a;
+            flex-grow: 1;
+            flex-shrink: 1;     
+                     
+        }
+        .item4_sub .sub_3{            
+            background:#afdd9a;
+            flex-grow: 1;
+            flex-shrink: 1;     
+                    
+        }
+        .item4_sub .sub_4{            
+            background:#cfed9a;
+            flex-grow: 1;
+            flex-shrink: 1;  
+               
+                     
+        }
+        
+        /*리스트 항목*/
+        .list_line{
+            display: flex;
+            justify-content:space-between;
+            
+        }
+        .list_line:nth-child(){
+            text-align:right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <h3>월회비</h3>
+
+        <div class="header_container">
+            
+        
+            <div class="item1">
+                <div class="title">월회비</div>
+            </div>
+            <div class="item2">
+                <div class="title">정상</div>
+                <div class="item2_sub">
+                    <div class="subitem sub_1">부과</div>
+                    <div class="subitem sub_2">납부</div>
+                    <div class="subitem sub_3">미납</div>
+                    <div class="subitem sub_4">금일납부 납부율</div>
+                </div>
+            </div>
+            <div class="item3">
+                <div class="title">자격변동</div>
+                <div class="item3_sub">
+                    <div class="subitem sub_1">부과</div>
+                    <div class="subitem sub_2">납부</div>
+                    <div class="subitem sub_3">전일납부</div>
+                    <div class="subitem sub_4">금일잔액</div>
+                    <div class="subitem sub_5">금일납부 납부율</div>
+                </div>
+            </div>
+            <div class="item4">
+                <div class="title">총계</div>
+                <div class="item4_sub">
+                    <div class="subitem sub_1">부과</div>
+                    <div class="subitem sub_2">납부</div>
+                    <div class="subitem sub_3">미납</div>
+                    <div class="subitem sub_4">납부율</div>
+                
+                </div>
+            
+            </div>
+
+        
+        </div>
+        
+        <!--월회비 테이블 헤더 끝-->
+
+        <div class="list_line">
+            <div class="subitem">10,000</div>
+            <div class="subitem">20,000</div>
+            <div class="subitem">30,000</div>
+            <div class="subitem">40,000</div>
+            <div class="subitem">50,000</div>
+            <div class="subitem">60,000</div>
+            <div class="subitem">70,000</div>
+            <div class="subitem">80,000</div>
+            <div class="subitem">90,000</div>
+            <div class="subitem">10,000</div>
+            <div class="subitem">11,000</div>
+            <div class="subitem">12,000</div>
+            <div class="subitem">13,000</div>
+            <div class="subitem">14,000</div>
+
+        </div>
+    </div>      
+</body>
+</html>

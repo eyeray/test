@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="table-wrapper">
+        <div class="column-item">
+            <div class="left">
+                제목 1
+            </div>
+        </div>
+        <div class="column-item">
+            <div class="right">
+                첫번째 내용입니다.
+            </div>
+        </div>
+    
+        <div class="column-item">
+            <div class="left">
+                제목 2
+            </div>
+        </div>
+        <div class="column-item">
+            <div class="right">
+                두번째 내용입니다.
+            </div>
+        </div>
+    
+        <div class="column-item">
+            <div class="left">
+                제목 3
+            </div>
+        </div>
+        <div class="column-item">
+            <div class="right">
+                세번째 내용입니다.
+            </div>
+        </div>
+    
+        <div class="column-item">
+            <div class="left">
+                제목 4
+            </div>
+        </div>
+        <div class="column-item">
+            <div class="right">
+                네번째 내용입니다.
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .table-wrapper {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 0;
+        }
+
+        .column-item {
+            padding: 1rem;
+        }
+
+        .table-wrapper > div:nth-child(4n+1),
+        .table-wrapper > div:nth-child(4n+2) {
+            background-color: orange;
+        }
+    </style>
+</body>
+</html>
