@@ -33,6 +33,19 @@
                 "m n n n n q q q q q t t t t"
                 "m a b c d e f g i j k l o p";            ;
         }
+        .list_container{
+            width:96%;
+            margin: 0 auto;
+
+            display:grid;
+            grid-gap: 1px;
+           
+            grid-template-rows: repeat(1, 30px);
+            grid-template-columns: repeat(14, 1fr);   
+
+            grid-template-areas: 
+                "li0 li1 li2 li3 li4 li5 li6 li7 li8 li9 li10 li11 li12 li13";            ;
+        }
         
         .container>div{
             background-color: rgba(255, 255, 255, 0.8);
@@ -47,6 +60,24 @@
 
             overflow: hidden;
             
+        }
+        .list_container>div{
+           border-bottom:1px solid black;
+           border-left:1px solid black;
+            text-align: center;
+            
+            font-size: 12px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 1;
+
+            overflow: hidden;
+            
+        }
+        .list_container>div:nth-child(14){
+            border-right: 1px solid black;
         }
         
         
@@ -126,6 +157,10 @@
             grid-area:p;
         }
 
+        .liitem0{
+            grid-area:li0;
+        }
+
     </style>
 </head>
 <body>
@@ -149,9 +184,69 @@
         <div class="item12">미납</div>
         <div class="item13">납부율</div>
     </div>
+
         
     <!--m비 테이블 헤더 끝-->
-
+    <div class="list_container">  
+        
+        <div class="li_item0">1000</div>
+       
+        <div class="li_item1">2000</div>
+        <div class="li_item2">3000</div>
+        <div class="li_item3">4000</div>
+        <div class="li_item4">5000</div>
+        
+        <div class="li_item5">6000</div>
+        <div class="li_item6">7000</div>
+        <div class="li_item7">8000</div>
+        <div class="li_item8">9000</div>
+        <div class="li_item9">10000</div>
+        
+        <div class="li_item10">11000</div>
+        <div class="li_item11">12000</div>
+        <div class="li_item12">13000</div>
+        <div class="li_item13">14000</div>
+    </div>
+    <div class="list_container">  
+        
+        <div class="li_item0">1000</div>
+       
+        <div class="li_item1">2000</div>
+        <div class="li_item2">3000</div>
+        <div class="li_item3">4000</div>
+        <div class="li_item4">5000</div>
+        
+        <div class="li_item5">6000</div>
+        <div class="li_item6">7000</div>
+        <div class="li_item7">8000</div>
+        <div class="li_item8">9000</div>
+        <div class="li_item9">10000</div>
+        
+        <div class="li_item10">11000</div>
+        <div class="li_item11">12000</div>
+        <div class="li_item12">13000</div>
+        <div class="li_item13">14000</div>
+    </div>
+    <div class="list_container">  
+        
+        <div class="li_item0">1000</div>
+       
+        <div class="li_item1">2000</div>
+        <div class="li_item2">3000</div>
+        <div class="li_item3">4000</div>
+        <div class="li_item4">5000</div>
+        
+        <div class="li_item5">6000</div>
+        <div class="li_item6">7000</div>
+        <div class="li_item7">8000</div>
+        <div class="li_item8">9000</div>
+        <div class="li_item9">10000</div>
+        
+        <div class="li_item10">11000</div>
+        <div class="li_item11">12000</div>
+        <div class="li_item12">13000</div>
+        <div class="li_item13">14000</div>
+    </div>
        
     </div>      
 </body>
