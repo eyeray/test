@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+
+        html{
+            font-size: 14px;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            transition:all 0.2s ease; 
+        }
+        
+        .container{
+            
+            width:96%;
+            margin: 0 auto;
+
+            display:grid;
+            /* grid-gap: 1px; */
+           
+            grid-template-rows: repeat(3, 30px);
+            grid-template-columns: repeat(14, 1fr);   
+
+            grid-template-areas: 
+                "h h h h h h h h h h h h h h"
+                "m n n n n q q q q q t t t t"
+                "m a b c d e f g i j k l o p";            ;
+        }
+        .list_container{
+            width:96%;
+            margin: 0 auto;
+
+            display:grid;
+            /* grid-gap: 1px; */
+           
+            grid-template-rows: repeat(1, 30px);
+            grid-template-columns: repeat(14, 1fr);   
+
+            grid-template-areas: 
+                "li0 li1 li2 li3 li4 li5 li6 li7 li8 li9 li10 li11 li12 li13";            ;
+        }
+        
+        .container>div{
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            
+            
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 1;
+
+            overflow: hidden;
+
+            border-top:1px solid black;
+            border-left:1px solid black;
+            
+        }
+
+        
+
+
+        .list_container>div{
+           border-top:1px solid black;
+           border-left:1px solid black;
+            text-align: center;
+            
+            
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 1;
+
+            overflow: hidden;
+            
+        }
+        .bd-right{
+            border-right: 1px solid black;
+           
+        }
+        
+        
+        .bd-bottom{
+            
+            border-bottom: 1px solid black;
+
+        }
+        
+        .item_title{
+            /* 제목  월회비 목록*/
+            grid-area:h;
+            
+            
+        }
+        .title1{
+            /* 월회비 */
+            grid-area:m;
+            
+        }
+        .title2{
+            /* 정상 */
+            grid-area:n;
+        }
+        .item1{
+            /* 부과 */
+            grid-area:a;
+        }
+        .item2{
+            /* 납부 */
+            grid-area:b;
+        }
+        .item3{
+            /* 미납 */
+            grid-area:c;
+        }
+        .item4{
+            /* 금일납부 납부율 */
+            grid-area:d;
+        }
+        .title3{
+            /* 자격변동 */
+            grid-area:q;
+        }
+        .item5{
+            /* 부과 */
+            grid-area:e;
+        }
+        .item6{
+            /* 납부 */
+            grid-area:f;
+        }
+        .item7{
+            /* 전일납부 */
+            grid-area:g;
+        }
+        .item8{
+            /* 금일잔액 */
+            grid-area:i;
+        }
+        .item9{
+            /* 금일납부 납부율 */
+            grid-area:j;
+        }
+        .title4{
+            /* 총계 */
+            grid-area:t;
+        }
+        .item10{
+            /* 부과 */
+            grid-area:k;
+        }
+        .item11{
+            /* 납부 */
+            grid-area:l;
+        }
+        .item12{
+            /* 미압 */
+            grid-area:o;
+        }
+        .item13{
+            /* 납부율 */
+            grid-area:p;
+        }
+
+        .liitem0{
+            grid-area:li0;
+        }
+
+        /* PC (해상도 1024px)*/ 
+        @media screen and (min-width:1024px) { 
+            html{
+                font-size:14px;
+            }
+            
+        } 
+        /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+        @media screen and (min-width:768px) and (max-width:1023px){ 
+            html{
+                font-size:12px;
+            }
+        } 
+        /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+        @media screen and (max-width:767px) {
+            html{
+                font-size:10px;
+            }
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <div class="item_title bd-right">월회비 목록</div>
+        <div class="title1">월회비</div>
+        <div class="title2">정상</div>
+        <div class="item1">부과</div>
+        <div class="item2">납부</div>
+        <div class="item3">미납</div>
+        <div class="item4">금일납부 납부율</div>
+        <div class="title3">자격변동</div>
+        <div class="item5">부과</div>
+        <div class="item6">납부</div>
+        <div class="item7">전일납부</div>
+        <div class="item8">금일잔액</div>
+        <div class="item9">금일납부 납부율</div>
+        <div class="title4 bd-right">총계</div>
+        <div class="item10">부과</div>
+        <div class="item11">납부</div>
+        <div class="item12">미납</div>
+        <div class="item13 bd-right">납부율</div>
+    </div>
+
+        
+    <!--m비 테이블 헤더 끝-->
+    <div class="list_container">  
+        
+        <div class="li_item0">1000</div>
+       
+        <div class="li_item1">2000</div>
+        <div class="li_item2">3000</div>
+        <div class="li_item3">4000</div>
+        <div class="li_item4">5000</div>
+        
+        <div class="li_item5">6000</div>
+        <div class="li_item6">7000</div>
+        <div class="li_item7">8000</div>
+        <div class="li_item8">9000</div>
+        <div class="li_item9">10000</div>
+        
+        <div class="li_item10">11000</div>
+        <div class="li_item11">12000</div>
+        <div class="li_item12">13000</div>
+        <div class="li_item13 bd-right">14000</div>
+    </div>
+    <div class="list_container">  
+        
+        <div class="li_item0">1000</div>
+       
+        <div class="li_item1">2000</div>
+        <div class="li_item2">3000</div>
+        <div class="li_item3">4000</div>
+        <div class="li_item4">5000</div>
+        
+        <div class="li_item5">6000</div>
+        <div class="li_item6">7000</div>
+        <div class="li_item7">8000</div>
+        <div class="li_item8">9000</div>
+        <div class="li_item9">10000</div>
+        
+        <div class="li_item10">11000</div>
+        <div class="li_item11">12000</div>
+        <div class="li_item12">13000</div>
+        <div class="li_item13 bd-right">14000</div>
+    </div>
+    <div class="list_container">  
+        
+        <div class="li_item0 bd-bottom">1000</div>
+       
+        <div class="li_item1 bd-bottom">2000</div>
+        <div class="li_item2 bd-bottom">3000</div>
+        <div class="li_item3 bd-bottom">4000</div>
+        <div class="li_item4 bd-bottom">5000</div>
+        
+        <div class="li_item5 bd-bottom">6000</div>
+        <div class="li_item6 bd-bottom">7000</div>
+        <div class="li_item7 bd-bottom">8000</div>
+        <div class="li_item8 bd-bottom">9000</div>
+        <div class="li_item9 bd-bottom">10000</div>
+        
+        <div class="li_item10 bd-bottom">11000</div>
+        <div class="li_item11 bd-bottom">12000</div>
+        <div class="li_item12 bd-bottom">13000</div>
+        <div class="li_item13 bd-right bd-bottom">14000</div>
+    </div>
+    
+       
+    </div>      
+</body>
+</html>
