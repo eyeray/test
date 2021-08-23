@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .container{
+            width:1000px;
+            margin: 0 auto;
+            background: #ccc;
+        }
+        .row{
+            position:relative;
+            margin:0 20px;
+        }
+        #header{
+           
+
+        }
+        #header .header-data{
+            
+
+        }
+        #header .header-title{
+            font-weight:600;
+            font-size:32px
+        }
+        #header .header-id{
+            position: absolute;
+            right:0;
+            bottom:0;
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+            font-size:18px;
+            color:#fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            background:linear-gradient(150deg, #a4a9b5 10%, rgba(164,169,181,0) 80%), #c4c4c4; 
+        }
+        
+       
+        @media screen and (max-width:1020px){
+            .container{width:100%;}
+        }
+
+        picture img, picture source{
+            transition:all 0.3s ease-out;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <time class="header-data">2021년 8월 23일</time>
+                <h1 class="header-title">음악듣기</h1>
+                <div class="header-id">w</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <picture>
+                <source srcset="assets/img/bestM01@3x.jpg" media="(min-width:800px)">
+                <source srcset="assets/img/bestM01@2x.jpg" media="(min-width:600px)">
+                <img src="assets/img/bestM01.jpg" srcset="assets/img/bestM01.jpg 1x, assets/img/bestM01@2x.jpg 2x, assets/img/bestM01@3x.jpg 3x" alt="이미지1">
+            </picture>
+        </article>
+        
+    </main>
+</body>
+</html>
